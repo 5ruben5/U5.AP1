@@ -1,18 +1,16 @@
-  GNU nano 6.4                                                                      ejercicio3.sh
 #!/bin/bash
+sum=0
+count=0
+read -p "Introduce un valor:" val
 
-# Con el read -p le hacemos una pregunta al usuario para que meta un dato.
+while [ $val -ne 0 ]
+do
+    sum=$((sum+val))
+    count=$((count+1))
+    echo "Introduce un valor:"
+    read val
+done
 
-read -p "Introduzca un numeor superior a 0 : " numero
-
-# Hacemos un if y le decimos que si el numero está despues del 0 que de error para eso usamos el -le que significa detrás de.
-if [ $numero -le 0 ]; then
-    echo "El numero introducido no es correcto, por favor la próxima vez introduzca un numero válido"  
-else
-    # Creramos un bucle for para que sume de 1 en uno y lo hará gracias a seq 1 por eso suma de 1 en 1.
-    for i in `seq 1 $numero` 
-    do
-        echo $i
-    done
-fi
+echo "La suma total de los valores introducidos es: $sum"
+echo "El valor medio es: $((sum/count))"
 
