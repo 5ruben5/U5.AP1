@@ -18,6 +18,9 @@ if [ "$genero" != "aventura" ] && [ "$genero" != "comedia" ] && [ "$genero" != "
 fi
 
 # Añadimos los datos del libro al final del fichero bdlibros.txt
-echo "$titulo;$anyo;$editorial;$genero" >> bdlibros.txt
+echo "TITULO $titulo" >> bdlibros.txt
+echo "ANYO $anyo" >> bdlibros.txt
+echo "EDITORIAL $editorial" >> bdlibros.txt
+echo "GENERO $genero" >> bdlibros.txt
 
 echo "Los datos del libro se han añadido correctamente"
